@@ -2,7 +2,7 @@ import { makeNoise3D } from "fast-simplex-noise";
 import { hsl, gray } from "../color.js";
 
 let n = makeNoise3D();
-let num = 5;
+let num = 10;
 let bx;
 let by;
 let lastT;
@@ -34,7 +34,7 @@ function shade(x, y, t) {
         d = Math.max(0, 1 - d);
 
         //Make the dropoff sharper
-        d = Math.pow(d, 3);
+        d = Math.pow(d, 10);
 
         //Add it to the sum
         sum = sum + d;
